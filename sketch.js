@@ -1,7 +1,7 @@
 var PLAY = 1;
 var END = 0;
 var gameState = PLAY;
-var dieSound;
+let dieSound;
 
 var trex, trex_running, trex_collided;
 var ground, invisibleGround, groundImage;
@@ -22,7 +22,7 @@ function preload(){
   groundImage = loadImage("ground2.png");
   
   cloudImage = loadImage("cloud.png");
-  dieSound = loadSound("die.mp3");
+
   
   obstacle1 = loadImage("obstacle1.png");
   obstacle2 = loadImage("obstacle2.png");
@@ -37,7 +37,7 @@ function preload(){
 
 function setup() {
   createCanvas(600, 200);
-  
+   dieSound = loadSound("die.mp3");
   trex = createSprite(50,180,20,50);
   
   trex.addAnimation("running", trex_running);
